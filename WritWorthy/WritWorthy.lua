@@ -429,7 +429,7 @@ function WritWorthy:ScanInventoryForMasterWrits()
         local unique_id = WritWorthy.UniqueID(bag_id, slot_index)
         local llc_req = {}
         if parser.ToDolRequest then
-          llc_req = parser:ToDolRequest(unique_id)
+          llc_req = parser:ToDolRequest(unique_id) or {}
         end
         local inventory_data = {
           item_link = item_link,
