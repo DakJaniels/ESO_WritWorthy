@@ -435,6 +435,9 @@ end
 
 function Parser:ToMatList()
   -- d("self.r3list ct:"..tostring(#self.r3list))
+  if self.mat_list_fail_reason then
+    return nil
+  end
 
   -- Find the cheapest of multiple possible 3-tuples.
   local MatRow = WritWorthy.MatRow
@@ -463,6 +466,13 @@ function Parser:ToMatList()
       min_gold = mat_total
       min_r3 = r3
     end
+  end
+  if not min_r3 then
+    local effect_name_1 = self.effects[1] and self.effects[1].name or "?"
+    local effect_name_2 = self.effects[2] and self.effects[2].name or "?"
+    local effect_name_3 = self.effects[3] and self.effects[3].name or "?"
+    self.mat_list_fail_reason = "No reagent combo for:" .. effect_name_1 .. " + " .. effect_name_2 .. " + " .. effect_name_3
+    return Fail(self.mat_list_fail_reason)
   end
   -- Return materials for one batch of potion or poison.
   self.mat_list = {}
@@ -494,6 +504,9 @@ end
 
 function Parser:ToDolRequest(unique_id)
   local mat_list = self:ToMatList()
+  if not (mat_list and mat_list[1] and mat_list[2] and mat_list[3] and mat_list[4]) then
+    return nil
+  end
   local o = {}
   o[1] = GetItemIDFromLink(mat_list[1].link) -- solvent
   o[2] = GetItemIDFromLink(mat_list[2].link) -- reagent1
