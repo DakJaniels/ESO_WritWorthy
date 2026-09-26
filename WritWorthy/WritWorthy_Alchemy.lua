@@ -472,7 +472,8 @@ function Parser:ToMatList()
     local effect_name_2 = self.effects[2] and self.effects[2].name or "?"
     local effect_name_3 = self.effects[3] and self.effects[3].name or "?"
     self.mat_list_fail_reason = "No reagent combo for:" .. effect_name_1 .. " + " .. effect_name_2 .. " + " .. effect_name_3
-    return Fail(self.mat_list_fail_reason)
+    -- return Fail(self.mat_list_fail_reason)
+    return nil
   end
   -- Return materials for one batch of potion or poison.
   self.mat_list = {}
