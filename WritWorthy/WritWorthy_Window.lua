@@ -147,8 +147,8 @@ WritWorthyInventoryList.CELL_NAME_LIST = {
   WritWorthyInventoryList.CELL_DETAIL3,
   WritWorthyInventoryList.CELL_DETAIL4,
   WritWorthyInventoryList.CELL_DETAIL5,
-  WritWorthyInventoryList.CELL_ENQUEUE,
-  WritWorthyInventoryList.CELL_MIMIC
+  WritWorthyInventoryList.CELL_MIMIC,
+  WritWorthyInventoryList.CELL_ENQUEUE
 }
 -- Cells that are shown/hidden click buttons, not text data.
 WritWorthyInventoryList.CELL_UNTEXT_LIST = {
