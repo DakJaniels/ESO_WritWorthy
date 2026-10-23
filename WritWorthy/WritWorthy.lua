@@ -895,6 +895,7 @@ function WritWorthy.OnAddOnLoaded(event, addonName)
     end
     WritWorthy:Initialize()
     WritWorthy.RegisterAGSInitCallback()
+    EVENT_MANAGER:UnregisterForEvent(WritWorthy.name, EVENT_ADD_ON_LOADED)
   end
 end
 
