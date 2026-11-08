@@ -924,13 +924,18 @@ function WritWorthy:Initialize()
 
   WritWorthy.InventoryList = WritWorthyInventoryList:New()
 
-  -- Load the LibLazyCrafting queue BEFORE we start up
-  -- the list UI. This gives the list UI actual queue
-  -- data to consume when deciding which checkboxes to
-  -- initially mark checked.
-  WritWorthyInventoryList.RestoreFromSavedChariables()
-  WritWorthy.InventoryList:BuildMasterlist()
-  WritWorthy.InventoryList:Refresh()
+  -- GetSourceItemIdFromResultItem returns 0 until EVENT_INITIALIZED, which
+  -- LibCharacterKnowledge fires after the initial loadscreen. Both the queue
+  -- restore and the inventory list scan call ScanInventoryForMasterWrits, so
+  -- both wait for that callback. Queue restore still runs first so the list
+  -- UI sees which rows were already queued.
+  local function RestoreQueueAndBuildMasterlist()
+    WritWorthyInventoryList.RestoreFromSavedChariables()
+    WritWorthy.InventoryList:BuildMasterlist()
+    WritWorthy.InventoryList:Refresh()
+  end
+  local LCK = LibCharacterKnowledge
+  LCK.RegisterForCallback(WritWorthy.name, LCK.EVENT_INITIALIZED, RestoreQueueAndBuildMasterlist)
   WritWorthyUI_RestorePos()
 
   -- If WritWorthy_AutoQuest.lua is un-commented-out
