@@ -1,0 +1,731 @@
+[B]7.6.1 2026-10-22[/B] ~DakJaniels
+
+Unregister EVENT_ADDON_LOADED.
+
+[B]7.6.0 2026-10-22[/B] ~DakJaniels
+
+Added provisioning recipe data for Granny's Eel Pie.
+Moved the Use Mimic Stone (M) column next to the queue checkbox.
+
+[B]7.5.9 2026-09-28[/B] ~DakJaniels
+
+Update 51 changes:
+
+fix: handle error message for impossible combo's
+fix: llc not updated yet on pts added fallback
+change: make unsolvable writs silent
+fix: update default price of new mats
+change: version bump
+
+Notes:
+
+ToDolRequest returns nil instead of building an LLC request
+ScanInventoryForMasterWrits keeps an empty table so init does not error the writ list shows solvent + the three effect names, and queue is blocked with No reagent combo for:Cowardice + Hindrance + Detection
+
+[B]7.5.8 2026-05-28[/B]
+[LIST]
+[*] Updated fallback material values.
+[*] Added separate LibPrice source options for MM, ATT, and TTC pricing.
+[*] Improved material price resolution behavior when pricing data is unavailable.
+[*] Updated localization entries for new pricing options.
+[*] Added Simplified Chinese and Spanish translations for pricing menu options.
+[/LIST]
+
+[B]7.5.7 2026-05-26[/B]
+[LIST]
+[*] Removed previously added reagent/effect support
+[/LIST]
+
+[B]7.5.2, 7.5.6 2025-11-21[/B]
+[LIST]
+[*] Updated Alchemy effects and reagents list
+[/LIST]
+
+[B]7.5.1 2025-07-08[/B]
+[LIST]
+[*] Add license information
+[/LIST]
+
+[B]7.4.7 2025-07-02[/B]
+[LIST]
+[*] API Version Bump for dependencies
+[*] Nit-Pick fixes to function calls
+[*] Minor fix for LibSets
+[/LIST]
+
+[B]7.4.9 2024-12-16[/B]
+[LIST]
+[*] Minor fix for slash commands
+[/LIST]
+
+[B]7.4.8 2024-06-21[/B]
+[LIST]
+[*] Hotfix for ZOS Jewelry index swap
+[/LIST]
+
+[B]7.4.7 2024-06-20[/B]
+[LIST]
+[*] API Version Bump for dependencies
+[/LIST]
+
+[B]7.4.5, 7.4.6 2024-01-15[/B]
+[LIST]
+[*] Altered IsItemCraftable for compatibility with LLC (Dolgubon)
+[/LIST]
+
+[B]7.4.4 2023-11-03[/B]
+[LIST]
+[*] Altered a few variables so they are local to the function as they should be
+[/LIST]
+
+[B]7.4.3 2023-11-03[/B]
+[LIST]
+[*] Updated ziggr's code for jewelry crafting
+[/LIST]
+
+[B]7.4.2 2023-11-03[/B]
+[LIST]
+[*] Updated /writworthy port to ziggr's Linchal Grand Manor, per his request
+[/LIST]
+
+[B]7.4.1 2023-10-30[/B]
+[LIST]
+[*] Updated Warn message as suggested by code65536
+[*] API increase for libraries
+[/LIST]
+
+[B]7.4.0 2023-10-30[/B]
+[LIST]
+[*] Added ID numbers for new plating as suggested by code65536
+[/LIST]
+
+[B]7.3.9 2023-10-30[/B]
+[LIST]
+[*] API increase for libraries
+[/LIST]
+
+[B]7.3.8 2023-09-18[/B]
+[LIST]
+[*] API increase for libraries
+[/LIST]
+
+[B]7.3.7 2023-05-21[/B]
+[LIST]
+[*] Updated Provisioning recipe lookup up to, Necrom
+[/LIST]
+
+[B]7.3.6 2023-05-7[/B]
+[LIST]
+[*] Increase library version requirements
+[/LIST]
+
+[B]7.3.5 2023-04-16[/B]
+[LIST]
+[*] Added window position reset button
+[/LIST]
+
+[B]7.3.4 2022-11-12[/B]
+[LIST]
+[*] Corrected manifest version for LibLazyCrafting. It should be 3000
+[/LIST]
+
+NOTE: It's not a decimal number. It is the line AddOnVersion not the Version. I had changed it in my own personal copy. I should have checked that.
+
+[B]7.3.3 2022-11-11[/B]
+[LIST]
+[*] Update 36/ESO 8.2.x/API 101036/Firesong
+[/LIST]
+
+[B]7.3.2 2022-03-15[/B]
+[LIST]
+[*] Oops fix API version in WritWorthy.txt manifest.
+[/LIST]
+
+[B]7.3.1 2022-03-15[/B]
+[LIST]
+[*] Update 33/ESO 7.3.0/API 101033/Ascending Tide
+[*] Replace LibMotif with LibCharacterKnowledge
+[*] French translations from JAKEZ31. Merci!
+[*] /writworthy port EU → @PhnxZ's Stillwater Retreat
+[*] Gamepad UI additions from Friday-The13-rus
+[/LIST]
+
+[B]7.0.4 2021-06-07[/B]
+[LIST]
+[*] /writworthy port: jump to @ziggr's crafting house
+[*] blind attempt to prevent second call to LibLazyCrafting:AddRequestingAddon()
+[/LIST]
+
+[B]7.0.3 2021-05-30[/B]
+[LIST]
+[*] /writworthy mat : displays a list of materials for all queued writs.
+[/LIST]
+
+[B]7.0.2 2021-04-27[/B]
+[LIST]
+[*] Fix error if matlist window hidden while enqueuing/dequeuing writ.
+[/LIST]
+
+[B]7.0.1 2021-04-27[/B]
+[LIST]
+[*] Update 30/ESO 7.0.0/API 100035/Blackwood
+[*] new and experimental: /writworthy mat: display a list of required (or just missing) materials
+[/LIST]
+
+[B]6.3.1 2021-04-13[/B]
+[LIST]
+[*] LibMotif: move motif knowledge IDs out of WritWorthy to new library "LibMotif"
+[/LIST]
+
+[B]6.2.7 2021-01-05[/B]
+[LIST]
+[*] French translations from JAKEZ31. Merci!
+[*] No code changes.
+[/LIST]
+
+[B]6.2.6 2020-12-24[/B]
+[LIST]
+[*] Show missing materials in tooltip. Settings to optionally show [I]all[/I] materials, if you like ridiculously long tooltips, or none, if you dislike cluttered tooltips.
+[*] Hide WritWorthy's duplicate warnings if Marify's most excellent Confirm Master Writ is running. Many prefer Confirm Master Writ's tooltips, but still want WritWorthy for its crafting automation.
+[/LIST]
+
+[B]6.2.5 2020-11-12[/B]
+[LIST]
+[*] Fix copy-and-paste bug in FR translation table that caused it to emit errors if missing a translation for a new EN string. DE RU translation were not affected by this error.
+[/LIST]
+
+[B]6.2.4 2020-11-11[/B]
+[LIST]
+[*] Add new error message: "LibLazyCrafting <version> requires update for set <set_id> <set_name>": prevent enqueuing of writs that call for brand new sets that LibLazyCrafting does not yet know how to craft.
+[/LIST]
+
+[B]6.2.3 2020-11-11[/B]
+[LIST]
+[*] Motif ID 101 Greymoor. Remove erroneous duplicate Motif ID 88 for "Moongrave".
+[/LIST]
+
+[B]6.2.2 2020-11-05[/B]
+[LIST]
+[*] Motif IDs for Update 28/Markarth: Ancestral Reach, Arkthzand Armory, Hazardous Alchemy, Thorn Legion. Also Sea Giant from previous update now has an achievement pages_id.
+[/LIST]
+
+[B]6.2.1 2020-10-29[/B]
+[LIST]
+[*] RU Russian translation by ivann339. Thank you!
+[*] Update 28/6.2.1/API 100032/Markarth
+[*] No code changes.
+[/LIST]
+
+[B]6.0.4 2020-08-27[/B]
+[LIST]
+[*] French translations from JAKEZ31. Merci!
+[*] No code changes.
+[/LIST]
+
+[B]6.0.3 2020-05-30[/B]
+[LIST]
+[*] Fixed Refabricated motif_id.
+[*] new function WritWorthy.Smithing.ScanMotifs() dumps info about motifs unknown to WritWorthy to help add new motifs to future versions.
+[/LIST]
+
+[B]6.0.2 2020-05-29[/B]
+[LIST]
+[*] Greymoor motifs. Thank you, Teva!
+[/LIST]
+
+[B]6.0.1 2020-05-03[/B]
+[LIST]
+[*] Ziggr's final release. Ziggr does not play ESO enough to continue support.
+[*] Update 26/6.0.1/API 100031/Greymoor
+[*] Just an API and version increment, no other changes
+[/LIST]
+
+[B]5.3.2 2020-03-26[/B]
+[LIST]
+[*] LibStub purge
+[*] Remove LibCustomTitles. That's the last of the embedded libraries for WritWorthy.
+[*] Shield of Senchal motif achievement number fixed. Thank you, Ganza-ESO!
+[/LIST]
+
+[B]5.3.1 2020-02-27[/B]
+[LIST]
+[*] Update 25/5.3.0/API 100030/Harrowstorm
+[*] Motif pages for Moongrave Fane, New Moon Priest, Shield of Senchal
+[*] Remove "Seducer" shortened name for "Armor of Seducer"
+[/LIST]
+
+[B]5.2.4 2019-12-20[/B]
+[LIST]
+[*] Bugfix: Avoid infinite loop of UI Refresh() due to my buggy "delayed refresh" code for the new "Max gold per voucher" edit field.
+[/LIST]
+
+[B]5.2.3 2019-11-07[/B]
+[LIST]
+[*] Bugfix: "Use LibPrice for mat prices" would default to "ON" in the settings window (yay) but erroneously still acted as "OFF" in the actual price-fetching code (boo). Fixed, now defaults to "ON" in both places.
+[*] Bugfix: cell text would be misaligned for some rows.
+[*] Add itemLink for 4 recent style materials, so that folks could set their own hardcoded prices for those in code if they're into that sort of thing.
+[/LIST]
+
+[B]5.2.2 2019-11-06[/B]
+[LIST]
+[*] "Max gold per voucher" filter disables/reds expensive writs that you don't want to craft. Thank you, Dolgubon!
+[*] Show writ counts in summary at bottom of window. Helps me avoid queuing more items than I have bag space to hold.
+[*] Setting "Use LibPrice for mat prices" lets you skip LibPrice/MM/ATT/TTC and go straight to the hardwired price table in WritWorthy_Price.lua.
+[/LIST]
+
+[B]5.2.1 2019-10-19[/B]
+[LIST]
+[*] Update 24/5.2.0/API 100029/Dragonhold
+[*] Motif numbers for Sunspire, Moongrave, Stags of Z'en, Dragonguard
+[/LIST]
+
+[B]5.1.5 2019-09-06[/B]
+[LIST]
+[*] RU Russian translation by ivann339. Thank you!
+[/LIST]
+
+[B]5.1.4 2019-09-01[/B]
+[LIST]
+[*] Re-enable jewelry auto-crafting. Requires LibLazyCrafting version 2.91 or greater.
+[/LIST]
+
+[B]5.1.3 2019-08-13[/B]
+[LIST]
+[*] Temporarily disable Jewelry auto-crafting until I can figure out why it infinite-loops.
+[/LIST]
+
+[B]5.1.2 2019-07-11[/B]
+[LIST]
+[*] Tested fix for parsing green/blue jewelry writs. Thank you, wizzard2k, for the blue writ and all the help.
+[/LIST]
+
+[B]5.1.1 2019-07-11[/B]
+[LIST]
+[*] Update 23/5.1.0/API 100028/Scalebreaker
+[*] Untested fix for green/blue jewelry writs.
+[/LIST]
+
+[B]5.0.13 2019-07-05[/B]
+[LIST]
+[*] Fix MM Fallback prices: was erroneously preferring "NPC Vendor" prices (13g for a Zircon Plating) instead of hardcoded WritWorthy numbers (21,000g) or MM/ATT/TTC (27,214g).
+[/LIST]
+
+[B]5.0.12 2019-06-23[/B]
+[LIST]
+[*] New error message in chat when attempting to craft but lack required materials: "Cannot craft [Sealed Woodworking Writ]: insufficient materials. 0/14 Sanded Ruby Ash."
+[/LIST]
+
+[B]5.0.11 2019-06-12[/B]
+[LIST]
+[*] New "Use Mimic Stone?" checkbox column lets you use a Crown Mimic Stone instead of a style material for this writ.
+[/LIST]
+
+[B]5.0.10 2019-06-09[/B]
+[LIST]
+[*] Provisioning: require only Chef or Brewer, not both.
+[*] Internal table reduction: remove about 30KB worth of tables that can now be replaced with calls into Baertram's LibSets or the ESO Elsweyr API.
+[*] Internal debug log: switch from cheesy internal logging code to sirinsidiator's LibDebugLogger
+[/LIST]
+
+[B]5.0.9 2019-06-04[/B]
+[LIST]
+[*] New and experimental: Integrate with HomeStationMarker to mark stations you need to visit for enqueued writs.
+[*] Remove embedded LibStub.
+[*] Minor text changes.
+[/LIST]
+
+[B]5.0.8 2019-05-27[/B]
+[LIST]
+[*] Tooltips work with AwesomeGuildStore 1.1. Thanks, Sirinsidator, for the fix!
+[/LIST]
+
+[B]5.0.7 2019-05-21[/B]
+Add motif and style mats for 7 recent styles:
+[LIST]
+[*] Huntsman
+[*] Silver Dawn
+[*] Dead-Water
+[*] Honor Guard
+[*] Elder Argonian
+[*] Coldsnap
+[*] Meridian
+[/LIST]
+Thanks, Molleggiato, for the bug report.
+
+[B]5.0.6 2019-05-20[/B]
+[LIST]
+[*] Refresh: clear cached skills. Refreshing the main WritWorthy window will now update to reflect any newly purchased skills such as Brewer or Temper Expertise. Thanks, Dolgubon, for the bug report.
+[/LIST]
+
+[B]5.0.5 2019-05-13[/B]
+[LIST]
+[*] LibLazyCrafting: Use ESO setId values instead of LLC-proprietary when LLC supports ESO values.
+[/LIST]
+
+[B]5.0.4 2019-05-05[/B]
+[LIST]
+[*] Delay API calls into LibSets until after LibSets' initial scan completes. Avoids UI Error if you try to show a Master Writ tooltip while LibSets is still scanning. Thanks, Baertram for the find and fix!
+[/LIST]
+
+[B]5.0.3 2019-04-30[/B]
+[LIST]
+[*] DE German translation, made [I]Better By Baertram.[/I] Thank you!
+[/LIST]
+
+[B]5.0.2 2019-04-29[/B]
+[LIST]
+[*] Expect and report bugs! I touched a lot of code to support multiple languages.
+[*] DE German "translation"
+    WritWorthy now honors the ESO Client's language for things such as material, set, trait, and other names.
+    Includes a *terrible* Google Translate DE German translation for the rest of the WritWorthy UI such as window titles and controls.
+[*] Baertram's LibSets is no longer optional: required so that WritWorthy can show set names in German or whatever language.
+[/LIST]
+
+[B]5.0.1 2019-04-15[/B]
+[LIST]
+[*] Update 22/5.0.0/API 100027/Elsweyr
+[*] Use Baertram's LibSets for set info (number of traits required for a requested set). Optional. If LibSets isn't loaded, WritWorthy still has its own table of the same data.
+[/LIST]
+
+[B]4.3.3 2019-03-20[/B]
+[LIST]
+[*] Integrate with sirinsidiator's AwesomeGuildStore 1.0-beta so that once again you can search guild stores for writs whose purchase price + crafting cost is under N gold per voucher. Thank you TNTKokser for the bug report, and sirinsidator for AwesomeGuildStore and its easy-to-use API.
+[/LIST]
+
+[B]4.3.2 2019-03-03[/B]
+[LIST]
+[*] Remove embedded LibLazyCrafting. It is now a standalone library. Thank you, Dolgubon!
+[/LIST]
+
+[B]4.3.1 2019-02-01[/B]
+[LIST]
+[*] Update 21/4.3.1/API 100026/Wrathstone
+[*] Alchemy: craft 16x, not 32x, poisons for Update 21 on PTS.
+    (Current live server, Update 20/4.2.12/API 100025/Murkmire, continues to craft 32x poisons, since live still requires 20x poisons per master writ.)
+[*] Kvatch Gladiator requires 5 traits, not 6.
+    Thanks, azatee, for the report!
+[/LIST]
+
+[B]4.2.7 2018-12-19[/B]
+[LIST]
+[*] bugfix: error in WritWorthy.TooltipInsertOurText() for New Life Charity Writ.
+[/LIST]
+
+[B]4.2.6 2018-11-29[/B]
+[LIST]
+[*] Tamriel Trade Centre support.
+[*] New LibPrice is required. Install separately. Handles all price lookups now, supports Master Merchant, Arkadius' Trade Tools, Tamriel Trade Centre, and more.
+[/LIST]
+
+[B]4.2.5 2018-11-22[/B]
+[LIST]
+[*] Yet another blind attempt to avoid UI Error during early call into ATT.
+[/LIST]
+
+[B]4.2.4 2018-11-21[/B]
+[LIST]
+[*] Restore ATT/Arkadius' Trade Tools support. Thanks to Arkadius for the find!
+[/LIST]
+
+[B]4.2.3 2018-11-15[/B]
+[LIST]
+[*] Remove library: LibAddonMenu-2.0. Install it separately.
+[*] Remove ATT/Arkadius' Trade Tools support. It caused too many error reports in the 4 months it existed.
+[/LIST]
+
+[B]4.2.2 2018-10-23[/B]
+[LIST]
+[*] Library Update:
+[*]   LibAddonMenu-2.0 26
+[*]   LibCustomMenu    6.6 standalone
+[*]   LibLazyCrafting  2.22
+[/LIST]
+
+[B]4.2.1 2018-09-17[/B]
+[LIST]
+[*] Update 20/4.2.1/API 100025/Murkmire
+[*] Add Welkynar and Dremora motif knowledge.
+[/LIST]
+
+[B]4.1.5 2018-08-21[/B]
+[LIST]
+[*] Update to LibLazyCrafting b62e972 (Smithing 2.5, use only 1 green material for jewelry)
+[/LIST]
+
+[B]4.1.4 2018-08-17[/B]
+[LIST]
+[*] Jewelry: honor reduced material requirements in material cost display.
+[/LIST]
+
+[B]4.1.3 2018-08-16[/B]
+[LIST]
+[*] Unofficial fix to LibLazyCrafting for jewelry crafting reduced improvement costs.
+[*] Bugfix: "SI_KEYBINDINGS_CATEGORY_WRIT_WORTHY" erroneously appearing in Controls/Keybindings
+[*] Minor text fixes.
+[/LIST]
+
+[B]4.1.2 2018-07-24[/B]
+[LIST]
+[*] Support Arkadius' Trade Tools. Untested. Thank you, Patros, for the code.
+[*] Update M.M. fallback prices to PC NA 2018-07. Done mostly so that I could see how the PTS increase to Jewelry voucher rewards affects cost per voucher. (1500-5000g per voucher. Still 4x-8x what other tradeskills cost.)
+[*] Update to latest Dolgubon's LibLazyCrafter 2.2.
+[*] Minor text fixes.
+[/LIST]
+
+[B]4.1.1 2018-07-12[/B]
+[LIST]
+[*] Update 19/4.1.1/API 100024/Wolfhunter
+[*] Typofix: Stalhrim not Stahlrim. Thank you, Lakashi, for the find.
+[*] Welkynar: Still not craftable in-game, but at least we have an item link for its crafting material "Gryphon Plume".
+[*] Sirinsidiator's LibSlashCommander now optional.
+[/LIST]
+
+[B]4.0.12 2018-07-04[/B]
+[LIST]
+[*] Bugfix: string.format() error for jewelry crafter writs. Thank you, Dolgubon, for the report.
+[/LIST]
+
+[B]4.0.11 2018-07-04[/B]
+[LIST]
+[*] Bugfix: Performance improvement cache never invalidated itself to load fresh prices. Now the cache lasts for 5 minutes before resetting.
+[*] Updated to LibSlashCommander 1.0 r5. Fixes the "cannot up-arrow through chat history" bug.
+[*] Typofix: "vitified malondo" broke parsing of Psijic Order writs.
+[*] Fix: Pyandonean motifs fixed.
+[*] New: "Unknown motif: 73" error tooltip for motifs such as Welkynar that appear in writs but whose crafting details are not yet in-game and programmed into WritWorthy. Also omit such writs from WritWorthy autocraft window: they are not yet worthy.
+[/LIST]
+
+[B]4.0.10 2018-06-01[/B]
+[LIST]
+[*] Performance improvement. Internally cache Master Merchant prices to avoid duplicate lookups. Affects both the big WritWorthy window as well as the filter for Awesome Guild Store.
+[/LIST]
+
+[B]4.0.9 2018-05-22[/B]
+[LIST]
+[*] Update to LibLazyCrafting 2.1.  Fixes "LibLazyCrafting function missing" errors
+[*] Include style information for new styles. Fixes "inserted value must be specified" and "bad argument #1 to ipairs" errors in materials code. Thank you, XomRhoK for bug reports.
+[/LIST]
+
+[B]4.0.8 2018-05-19[/B]
+[LIST]
+[*] Summerset: use final texture string to detect jewelry writs.
+[/LIST]
+
+[B]4.0.7 2018-05-18[/B]
+[LIST]
+[*] bugfix: ESO+ subscriber bank now works. Thanks, Snow, for the fix!
+[*] bugfix: "Show material list in chat" setting works again. Thanks, XomRhoK for the bug report.
+[*] error reporting: "LibLazyCrafting function missing" now dumps more details to help ziggr figure out what's going wrong.
+[*] new: /writworthy count -- shows number of writs you have, and how many vouchers they're all worth.
+[*] add Sirinsidiator's most excellent LibSlashCommander 1.0 r4. Allows for command descriptions.
+[/LIST]
+
+[B]4.0.6 2018-05-04[/B]
+[LIST]
+[*] Update to LibLazyCrafting 2.0 with its shiny new support for jewelry crafting.
+[/LIST]
+
+[B]4.0.5 2018-04-28[/B]
+[LIST]
+[*] AwesomeGuildStore code review from Sirinsidiator: fix spacing so that WritWorthy and Master Merchant filters don't draw on top of each other. Internal caching to accelerate filter.
+[/LIST]
+
+[B]4.0.4 2018-04-27[/B]
+[LIST]
+[*] AwesomeGuildStore filter! You can now search guild stores for master writs that cost X gold or less to purchase + craft. Look for a "Per Voucher:" field when on the Consumables/Master Writ shopping tab.
+[*] Preliminary Jewelry Crafting support. Disabled in this release.
+[/LIST]
+
+[B]4.0.3 2018-04-21[/B]
+[LIST]
+[*] Fixed: motif names appear in "Detail 3" column again. Thank you, tomtomhotep for the bug report.
+[*] "Mat total: ?g" tooltip text now appears in red to better warn you that the per-voucher pricce ignores crafting cost. Thank you XomRhoK for the feature request.
+[*] Add "+ bank" to window subtitle when showing writs from both the character inventory and bank.
+[/LIST]
+
+[B]4.0.2 2018-04-20[/B]
+[LIST]
+[*] Fixed: M.M. Fallback works again.
+[*] New option: showing price in tooltip is now optional. Because some people use WritWorthy more for the crafting and less for the pricing. Thank you @Jerkling for the feature request.
+[*] New option: Include bank when listing writs available to craft. Be careful with this: no warning if you craft the same banked writ on multiple characters. Thank you @UESP for the feature request.
+[/LIST]
+
+[B]4.0.1 2018-04-17[/B]
+[LIST]
+[*] Update 18/4.0.0/API 100023/Summerset
+[*] Jewelry master writs parsed, materials listed, and knowledge checked.
+[*] Auto-crafting not yet implemented for jewelry
+[*] Manavortex's alternating colors for BS/CL/WW stations (thank you!).
+[*] Rename "Julianos" to full "Law of Julianos" to better match the stations's displayed name.
+[/LIST]
+
+[B]3.3.2 2018-02-22[/B]
+[LIST]
+[*] Add HotR motif style IDs. Thank you, Rhyono for the numbers from CraftStore
+[*] Remove unwanted LibAddonMenu.txt manifest file from like 2 years ago that was 1. in the wrong directory, and 2. shouldn't have been there at all. Thank you, Marazota for the find and fix.
+[*] LibAddonMenu updated from r18 (!) to r25.
+[/LIST]
+
+[B]3.3.1 2018-01-29[/B]
+[LIST]
+[*] Update 17 / ESO 3.3 / Dragon Bones / API 10022
+[*] /writworthy command toggles window
+[*] Exit crafting station after auto-crafting all we can at this station.
+[*] Update to LibLazyCrafting 1.1.9 8ef2e2, matching Dolgubon's Lazy Set Crafter 1.1.6 and Writ Crafter 36.19.
+[/LIST]
+
+[B]3.2.5 2017-12-16[/B]
+[LIST]
+[*] by Dolgubon: Adapt to API in LibLazyCrafting 1.9.
+[*] Fixes the Provisioning and Alchemy checks.
+[*] Fix possible issues with the LLC callback, honor crafting response code.
+[/LIST]
+
+[B]3.2.4 2017-12-15[/B]
+[LIST]
+[*] Update to LibLazyCrafting 1.9
+    from [URL=https://github.com/Dolgubon/LibLazyCrafting/commit/35227c147768e9fe861d31f12eb5100ac4079dac]LibLazyCrafting 1.9 35227c1 on GitHub[/URL]
+[/LIST]
+
+[B]3.2.3 2017-12-13[/B]
+[LIST]
+[*] Update to LibLazyCrafting 1.7
+    from [URL=https://github.com/Dolgubon/LibLazyCrafting/commit/8e4642c444775ecd26bc80b9ae380e8c3fd79318]LibLazyCrafting 1.7 8e4642c on GitHub[/URL]
+[/LIST]
+
+[B]3.2.2 2017-11-09[/B]
+[LIST]
+[*] Update to LibLazyCrafting 1.5. Same library version as in Dolgubon's Lazy Writ Crafter v36.8 and Dolgubon's Lazy Set Crafter v1.0.19
+[*] Allow WritWorthy window to be moved partially offscreen. Zig finds it [i]very[/i] handy to slide the window off to the right and just focus on crafting station names when doing dozens of master writs at a time.
+[*] Stop making an unnecessary extra crafted provisioning/alchemy item. Thank you Dolgubon for finding a 100% reproduction case.
+[/LIST]
+
+[B]3.2.1 2017-10-29[/B]
+[LIST]
+[*] Update to LibLazyCrafting 1.4. This fixes the error "WritWorthy_Window.lua:1118: attempt to index a nil value"
+[/LIST]
+
+[B]3.1.5 2017-10-16[/B]
+[LIST]
+[*]"Show material list in chat" has a new "Alchemy only" option for folks (like me!) who only check the material list for alchemy.
+[*]Bug Fix: check required materials right before attempting to craft alchemy or provisioning items. If you don't have enough Bugloss or Frost Mirriam, write that to chat and skip that item.
+[*]LibLazyCrafting: update to version 1.3 (circa October 2017)
+[/LIST]
+
+[B]3.1.4 2017-08-26[/B]
+[LIST]
+[*]Refresh button
+[*]"prosperous" -> "invigorating"
+[*]LibLazyCrafting: update from version 0.4 to 1.2, adapt to some API changes
+[*]LibLazyCrafting: fix bugs/missing features in 1.2, bump version to 1.3. This is not an official Dolgubon library release, so I expect bugs/surprises next time Dolgubon updates any of their crafting add-ons.
+[/LIST]
+
+[B]3.1.3 2017-08-15[/B]
+[LIST]
+[*]Manavortex's fix for autocraft window's error: "attempt to perform arithmetic on a nil value" if you run without Master Merchant.
+[/LIST]
+
+[B]3.1.2 2017-08-14[/B]
+[LIST]
+[*]"Motif X not known" fixed. I was off by +1 for all motifs.
+[*]HotR Motifs added: Redoran, Hlaalu, Telvanni. Not sure if they'll show up in writs, but if they do, WritWorthy will now check Master Merchant for their style material prices, just likt it does for all other motifs.
+[/LIST]
+
+[B]3.1.1 2017-08-14[/B]
+[LIST]
+[*]ESO 3.1 Horns of the Reach/API 20
+[*]Squelch errors for "table index is nil" for new item style constants.
+[*]Autocraft: no longer add mystery +1 to motif index. No longer required or correct.
+[*]KNOWN BUG: "Motif Barbaric not known" even though you do know this motif. For some reason the ESO API returns "false" for IsSmithingStyleKnown(barbaric=17+1) even if you know that motif. All motifs off by one.
+[/LIST]
+
+[B]3.0.7 2017-07-16[/B]
+[LIST]
+[*]Public API Support: new function WritWorthy.ToMatCost(itemLink) returns material cost for a single writ.
+[*]Bugfix: Make WritWorthy global be the actual add-on, not the LibAddOnMenu pane. Thank you sirinsidiator and silvereyes for the report+fix!
+[/LIST]
+
+[B]3.0.6 2017-07-10[/B]
+[LIST]
+[*]Bugfix: would inconsistently fail to report "Motif XXX not known" for some motifs. Thank you Rhyono for helping me debug this.
+[/LIST]
+
+[B]3.0.5 2017-06-22[/B]
+[LIST]
+[*]Replace hardcoded skill indices with a runtime scan for localized skill name. Turns out those indices change from player to player, are not constants. And there are no "skillId" analogs to "itemId" constants. Oh well. Fall back to string matching. Hopefully this will end the many reports of nil errors on other people's ESO clients. I included the names for EN, DE, and FR.  I do not have a JP client, so I lack those names, sorry.
+[/LIST]
+
+[B]3.0.4 2017-06-20[/B]
+[LIST]
+[*]Bugfix: operator < is not supported for nil < nil.  Thanks to Tonyleila for the report.
+[/LIST]
+
+[B]3.0.3 2017-06-18[/B]
+[LIST]
+[*]New window with list of all master writs in backpack.
+[*]Automatic crafting of writs.
+[*]integrate Dolgubon's LibLazyCrafting 0.4, which is actually Dolgubon's LibLazyCrafting 0.3 but with Zig-added support for alchemy and provisioning. If those don't work, it's Zig's fault not Dolgubons. Thank you Dolgubon for all the help!
+[/LIST]
+
+[B]3.0.2 2017-05-28[/B]
+[LIST]
+[*] Morrowind API: replace temporary workaround numbers with actual constants for new styles. Thank you @Rhyono for the CraftStore Morrowind update which had all the quest IDs I needed for the "which pages do you know?" query.
+[*] BugFix: never had a quest ID for the "Order of the Hour" motif. Now I do.
+[/LIST]
+
+[B]3.0.1 2017-05-21[/B]
+[LIST]
+[*] ESO 3.0 Morrowind/API 19
+[*] Temporary workaround: some item style constants changed in the new API and until I can figure out the new ones, use magic numbers. WritWorthy might report incorrect known/unknown results for these three motifs: Skinchanger, Grim Harlequin, Hollowjack.
+[*] Provisioning: require 2x crafting attempts, since most Provisioning writs seem to require 8 servings. (I assume any character performing master writs will have Chef/Brewer/Chemistry passive skills maxxed out.)
+[/LIST]
+
+[B]2.7.10 2017-04-04[/B]
+[LIST]
+[*] Option to fall back to hardcoded prices for common style and trait materials.
+[/LIST]
+
+[B]2.7.9 2017-03-22[/B]
+[LIST]
+[*]AHA Found the "Trait not known" bug for medium armor: when a writ required a trait for some medium armor piece (such as belt), WritWorthy erroneously checked the [I]light[/i] armor piece (such as sash).
+[/LIST]
+
+[B]2.7.8 2017-03-22[/B]
+[LIST]
+[*]Debug log: records details about the 20 most recent writs. If there's a problem with a writ, send a screenshot of the offending writ (or the UI error), and a screenshot of the writ that caused the problem. This ought to help me figure out what's going wrong.
+[/LIST]
+
+[B]2.7.7 2017-02-25[/B]
+[LIST]
+[*]Stop crashing auf Deutsch. When building recipe ingredient lists out of ZOS-returned data, use item links, not names, as element keys. All WritWorthy text is still in US English. The only change here is that it can run correctly when the ESO client is set to German.
+[/LIST]
+
+[B]2.7.6 2017-02-25[/B]
+[LIST]
+[*]Survive without Master Merchant. If missing, or if its database lacks some required materials, display "?g" for "unknown amount of gold" and don't count materials costs when calculating per-voucher cost.
+[/LIST]
+
+[B]2.7.5 2017-02-24[/B]
+[LIST]
+[*]Add big red text to tooltip if current character cannot craft the required item due to missing motif, traits or recipe.
+[/LIST]
+
+[B]2.7.4 2017-02-20[/B]
+[LIST]
+[*]Add a table of recipes to Provisioning so that the provisioning writs can show a material list even if the current character does not know the required recipe.  Fixes "Recipe not found" errors for such writs.
+[/LIST]
+
+[B]2.7.3 2017-02-16[/B]
+[LIST]
+[*]Settings UI: checkbox to enable/disable material list dump to chat. Too much clutter in the chat window.
+[*]Bugfix: Alchemy materials had poison/potion = Alkahest/Lorkhan's Tears swapped.
+[/LIST]
+
+[B]2.7.2 2017-02-14[/B]
+[LIST]
+[*]Replace string matching with item_link parsing
+[/LIST]
+
+[B]2.7.1 2017-02-12[/B]
+[LIST]
+[*]First release. Uses string matching that worked only for US English clients.
+[/LIST]
