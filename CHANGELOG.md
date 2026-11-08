@@ -1,6 +1,7 @@
 [B]7.6.2 2026-11-08[/B] ~DakJaniels
 
 Resolve provisioning recipe item ids with LibCharacterKnowledge.GetSourceItemIdFromResultItem instead of the hand-maintained food-to-recipe table.
+Build the inventory list and restore the crafting queue after LibCharacterKnowledge initializes, so provisioning writs are not logged as missing during addon load.
 
 [B]7.6.1 2026-10-22[/B] ~DakJaniels
 
