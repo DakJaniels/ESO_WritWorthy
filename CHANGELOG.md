@@ -1,3 +1,7 @@
+[B]7.6.2 2026-11-08[/B] ~DakJaniels
+
+Resolve provisioning recipe item ids with LibCharacterKnowledge.GetSourceItemIdFromResultItem instead of the hand-maintained food-to-recipe table.
+
 [B]7.6.1 2026-10-22[/B] ~DakJaniels
 
 Unregister EVENT_ADDON_LOADED.
