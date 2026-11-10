@@ -104,6 +104,20 @@ WritWorthy.ICON_TO_PARSER = {
 --  Alchemy.Parser
 --
 function WritWorthy.CreateParser(item_link)
+  local item_id = GetItemLinkItemId(item_link)
+  if WritWorthy.Holiday.WRIT_ITEM_ID[item_id] then
+    local fields = Util.ToWritFields(item_link)
+    local _, recipe_list_index, recipe_index = GetRecipeInfoFromItemId(fields.writ1 or 0)
+    if recipe_list_index and recipe_index then
+      return WritWorthy.Holiday.Parser:New()
+    end
+    if WritWorthy.Alchemy.Effects[fields.writ2]
+      and WritWorthy.Alchemy.Effects[fields.writ3]
+      and WritWorthy.Alchemy.Effects[fields.writ4] then
+      return WritWorthy.Alchemy.Parser:New()
+    end
+    return nil
+  end
   local icon, _, _, _, item_style = GetItemLinkInfo(item_link)
   local parser_class = WritWorthy.ICON_TO_PARSER[icon]
   if not parser_class then
@@ -417,6 +431,8 @@ function WritWorthy:ScanInventoryForMasterWrits()
   -- to avoid scroll blindness
   local save_mat_list_chat = self.savedVariables.enable_mat_list_chat
   self.savedVariables.enable_mat_list_chat = nil
+  -- requested_item_id -> backpack result items not yet claimed by a holiday writ
+  local holiday_backpack_unclaimed = {}
   for _, bag_id in ipairs(bag_list) do
     local slot_ct = GetBagSize(bag_id)
     for slot_index = 0, slot_ct do
@@ -424,6 +440,12 @@ function WritWorthy:ScanInventoryForMasterWrits()
       local parser = WritWorthy.CreateParser(item_link)
       if not (parser and parser:ParseItemLink(item_link)) then
         parser = nil
+      end
+      if parser and parser.class == WritWorthy.Holiday.Parser.class then
+        local unclaimed_count = holiday_backpack_unclaimed[parser.requested_item_id] or parser.backpack_count
+        local claimed_count = zo_min(unclaimed_count, parser.needed_count)
+        parser:SetOwnedCount(claimed_count)
+        holiday_backpack_unclaimed[parser.requested_item_id] = unclaimed_count - claimed_count
       end
       if parser then
         local unique_id = WritWorthy.UniqueID(bag_id, slot_index)
@@ -797,6 +819,8 @@ function WritWorthy.SlashCommand(arg1)
     if WritWorthy_AutoQuest then
       WritWorthy_AutoQuest()
     end
+  elseif arg1 == "holiday" then
+    WritWorthy.Holiday.DumpInventory()
   elseif arg1 == WW.Str("slash_mat"):lower() then
     if not WritWorthy.mat_ui_inited then
       WritWorthy.MatUI:LazyInit()

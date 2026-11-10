@@ -2,6 +2,11 @@
 
 Resolve provisioning recipe item ids with LibCharacterKnowledge.GetSourceItemIdFromResultItem instead of the hand-maintained food-to-recipe table.
 Build the inventory list and restore the crafting queue after LibCharacterKnowledge initializes, so provisioning writs are not logged as missing during addon load.
+Holiday and charity writs (food, drink, and furnishings) now show in the list and can be queued.
+New Ct column shows how many items a holiday writ still needs, minus what is in your backpack.
+Holiday furnishing writs show which crafting station to use.
+Completed writs can be checked again to re-queue them.
+Added /writworthy holiday to list holiday writs in chat.
 
 [B]7.6.1 2026-10-22[/B] ~DakJaniels
 
