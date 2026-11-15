@@ -126,7 +126,6 @@ WritWorthy.I18N["static"]["es"] = {
   ["header_tooltip_M"] = "Use mimic stone?",
   ["header_tooltip_V"] = "Voucher count",
   ["header_tooltip_Ct"] = "Result items still to craft, after those already in your backpack",
-  ["holiday_have_enough"] = "Already have %d/%d %s",
   ["keybind_writworthy"] = "Toggle window",
   ["know_err_motif"] = "Motif %s not known",
   ["know_err_recipe"] = "Recipe not known",
@@ -154,6 +153,8 @@ WritWorthy.I18N["static"]["es"] = {
 
   ["lam_ttc_price_desc"] = "Usar Tamriel Trade Centre mediante LibPrice para obtener precios de materiales.",
   ["lam_ttc_price_title"] = "Usar precios de TTC",
+  ["lam_average_price_desc"] = "Promediar los precios de todas las fuentes activadas en lugar de usar el primero encontrado.",
+  ["lam_average_price_title"] = "Promediar precios activados",
   ["lam_station_colors_desc"] = "Usar colores diferentes para herreria, sastreria y carpinteria en la ventana de WritWorthy.",
   ["lam_station_colors_title"] = "Colores de estacion en la ventana",
   ["lam_cmw_desc"] = "Si prefieres los tooltips de Confirm Master Writ de Marify, desactiva esta opcion para ocultar los avisos redundantes de WritWorthy.",

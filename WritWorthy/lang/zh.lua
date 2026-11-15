@@ -126,7 +126,6 @@ WritWorthy.I18N["static"]["zh"] = {
   ["header_tooltip_M"] = "Use mimic stone?",
   ["header_tooltip_V"] = "Voucher count",
   ["header_tooltip_Ct"] = "还需制作的数量，不含背包中已有的",
-  ["holiday_have_enough"] = "已有 %d/%d %s",
   ["keybind_writworthy"] = "Toggle window",
   ["know_err_motif"] = "Motif %s not known",
   ["know_err_recipe"] = "Recipe not known",
@@ -154,6 +153,8 @@ WritWorthy.I18N["static"]["zh"] = {
 
   ["lam_ttc_price_desc"] = "通过 LibPrice 使用 Tamriel Trade Centre 获取材料价格。",
   ["lam_ttc_price_title"] = "使用 TTC 价格",
+  ["lam_average_price_desc"] = "取所有已启用价格来源的平均值，而不是使用找到的第一个价格。",
+  ["lam_average_price_title"] = "平均已启用的价格",
   ["lam_station_colors_desc"] = "在 WritWorthy 窗口中为锻造、裁缝和木工物品使用不同颜色。",
   ["lam_station_colors_title"] = "窗口中使用制作台颜色",
   ["lam_cmw_desc"] = "如果你更喜欢 Marify 的 Confirm Master Writ 提示，请关闭此选项以隐藏 WritWorthy 的重复警告提示。",

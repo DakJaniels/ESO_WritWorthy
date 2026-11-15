@@ -514,7 +514,7 @@ function WritWorthy.MatUI:BuildMasterlist()
     local is_use_mimic = WritWorthyInventoryList:IsUseMimic(inventory_data)
     if is_queued and not is_completed then
       local parser = inventory_data.parser
-      local mat_list = parser:ToMatList()
+      local mat_list = parser.ToCraftMatList and parser:ToCraftMatList() or parser:ToMatList()
       if mat_list then
         for _, mat_row in ipairs(mat_list) do
           -- Replace style mat with mimic stone, if requested.

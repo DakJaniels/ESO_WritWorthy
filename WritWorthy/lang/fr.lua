@@ -127,7 +127,6 @@ WritWorthy.I18N["static"]["fr"] = {
   ["header_tooltip_M"] = "Utilisée une pierre caméléons ?",
   ["header_tooltip_V"] = "Nombre d'assignats",
   ["header_tooltip_Ct"] = "Objets encore à fabriquer, moins ceux déjà dans le sac",
-  ["holiday_have_enough"] = "Déjà %d/%d %s",
   ["keybind_writworthy"] = "Basculer la fenêtre",
   ["know_err_motif"] = "Motif %s pas connu",
   ["know_err_recipe"] = "Recette inconnue",
@@ -155,6 +154,8 @@ WritWorthy.I18N["static"]["fr"] = {
 
   ["lam_ttc_price_desc"] = "Utiliser Tamriel Trade Centre via LibPrice pour obtenir les prix des matériaux.",
   ["lam_ttc_price_title"] = "Utiliser les prix TTC",
+  ["lam_average_price_desc"] = "Faire la moyenne des prix de toutes les sources activées au lieu d'utiliser le premier trouvé.",
+  ["lam_average_price_title"] = "Moyenne des prix activés",
   ["lam_station_colors_desc"] = "Utilise différentes couleurs pour la forge, les vêtements et le travail du bois dans la fenêtre WritWorthy.",
   ["lam_station_colors_title"] = "Couleurs de la station dans la fenêtre",
   ["lam_cmw_desc"] = "Si vous préférez les info-bulles de confirmation de l'écriture principale de libMarify, désactivez cette option pour masquer les info-bulles d'avertissement redondantes de WritWorthy.",

@@ -1,3 +1,10 @@
+[B]7.6.3 2026-11-15[/B] ~DakJaniels
+
+Holiday writ tooltips show material cost, cost per voucher, and missing ingredients like master writs.
+Holiday writs already covered by items in your backpack show as completed (green) instead of red.
+New setting: Average enabled prices, which averages MM, ATT and TTC prices instead of using the first one found.
+Materials with no guild store or fallback price use their vendor value, so mat totals no longer show ?g.
+
 [B]7.6.2 2026-11-08[/B] ~DakJaniels
 
 Resolve provisioning recipe item ids with LibCharacterKnowledge.GetSourceItemIdFromResultItem instead of the hand-maintained food-to-recipe table.

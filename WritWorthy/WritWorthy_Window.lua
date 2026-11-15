@@ -656,6 +656,10 @@ function WritWorthyInventoryList:IsUseMimic(inventory_data)
 end
 
 function WritWorthyInventoryList:IsCompleted(inventory_data)
+  -- A holiday writ whose result items are already in the backpack.
+  if inventory_data and inventory_data.parser and inventory_data.parser.still_needed_count == 0 then
+    return true
+  end
   if
   not (inventory_data and inventory_data.unique_id and WritWorthy.savedChariables and
     WritWorthy.savedChariables.writ_unique_id and
@@ -1100,7 +1104,7 @@ function WritWorthyInventoryList:SetupRowControl(row_control, inventory_data)
   -- A completed row stays clickable so a writ crafted with the wrong
   -- count can be queued again. The mask only blocks rows that cannot
   -- be crafted at all.
-  if i_d.ui_can_queue or i_d.ui_is_completed then
+  if i_d.ui_can_queue or (i_d.ui_is_completed and i_d.llc_func) then
     b_mask:SetHidden(true)
   else
     b_mask:SetHidden(false)
@@ -1486,7 +1490,8 @@ function WritWorthy_LLC_IsItemCraftable(self, station_crafting_type, request)
   if not inventory_data then
     return orig_can_craft
   end
-  local mat_list = inventory_data.parser:ToMatList()
+  local parser = inventory_data.parser
+  local mat_list = parser.ToCraftMatList and parser:ToCraftMatList() or parser:ToMatList()
   if not mat_list then
     return orig_can_craft
   end
