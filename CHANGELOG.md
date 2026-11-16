@@ -8,6 +8,7 @@ New sortable Gold/V column shows each writ's material cost per voucher. The wind
 Writs that pay no vouchers are no longer blocked by the Max gold per voucher filter.
 List columns now move with their headers while a window is being resized, not only after.
 Fixed a UI error when sorting by the Ct column.
+Completed writs can no longer be queued again. Holiday writs become queueable on their own if their items leave your backpack. The queue colum sort would trigger this bug.
 
 [B]7.6.2 2026-11-08[/B] ~DakJaniels
 

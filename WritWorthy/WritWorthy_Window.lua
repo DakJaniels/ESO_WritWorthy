@@ -1142,10 +1142,7 @@ function WritWorthyInventoryList:SetupRowControl(row_control, inventory_data)
   b.inventory_data = inventory_data
   b_mask.inventory_data = inventory_data
   ZO_CheckButton_SetCheckState(b, i_d.ui_is_queued)
-  -- A completed row stays clickable so a writ crafted with the wrong
-  -- count can be queued again. The mask only blocks rows that cannot
-  -- be crafted at all.
-  if i_d.ui_can_queue or (i_d.ui_is_completed and i_d.llc_func) then
+  if i_d.ui_can_queue then
     b_mask:SetHidden(true)
   else
     b_mask:SetHidden(false)
