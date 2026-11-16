@@ -274,7 +274,19 @@ function WritWorthy.Util.OnMoveStop(top_level_control, saved_var_key_name)
   WritWorthy.Util.SavePos(top_level_control, saved_var_key_name)
 end
 
+-- Row cells are anchored at fixed offsets copied from the header cells,
+-- so they must be re-laid out every frame while the user drags the edge.
+function WritWorthy.Util.OnResizeStart(top_level_control, list)
+  top_level_control:SetHandler(
+    "OnUpdate",
+    function()
+      list:UpdateAllCellWidths()
+    end
+  )
+end
+
 function WritWorthy.Util.OnResizeStop(top_level_control, list, singleton, saved_var_key_name)
+  top_level_control:SetHandler("OnUpdate", nil)
   list:UpdateAllCellWidths()
   WritWorthy.Util.SavePos(top_level_control, saved_var_key_name)
 

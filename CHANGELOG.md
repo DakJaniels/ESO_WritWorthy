@@ -4,6 +4,10 @@ Holiday writ tooltips show material cost, cost per voucher, and missing ingredie
 Holiday writs already covered by items in your backpack show as completed (green) instead of red.
 New setting: Average enabled prices, which averages MM, ATT and TTC prices instead of using the first one found.
 Materials with no guild store or fallback price use their vendor value, so mat totals no longer show ?g.
+New sortable Gold/V column shows each writ's material cost per voucher. The window is wider to fit it. Thanks Frank!
+Writs that pay no vouchers are no longer blocked by the Max gold per voucher filter.
+List columns now move with their headers while a window is being resized, not only after.
+Fixed a UI error when sorting by the Ct column.
 
 [B]7.6.2 2026-11-08[/B] ~DakJaniels
 
